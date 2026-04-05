@@ -1,4 +1,4 @@
-# Système de Surveillance Industrielle par IA
+# SecureWatch - Système de Surveillance Industrielle par IA
 
 SecureWatch est une application de surveillance industrielle en temps réel basée sur la vision par ordinateur. Elle utilise YOLOv8 pour la détection de personnes et propose un tableau de bord interactif permettant de surveiller la sécurité, détecter les intrusions et analyser l’activité sur site.
 
@@ -63,9 +63,9 @@ L’interface est organisée en plusieurs sections :
 
 ## Équipe
 
-- Doha Zilaoui — Développement principal  
-- Soukaina Hachmoud — Vision par ordinateur  
-- Sara Fadil — Backend et système d’alertes  
+- Doha Zilaoui  
+- Soukaina Hachmoud 
+- Sara Fadil  
 
 ## Perspectives d’amélioration
 
