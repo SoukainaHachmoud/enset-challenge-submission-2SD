@@ -53,7 +53,7 @@ http://localhost:8501
 
 ## Description du fonctionnement
 
-L’application utilise YOLOv8 pour détecter les الأشخاص dans les images. Pour chaque personne détectée, une zone correspondant à la tête est estimée à partir d’un ratio configurable. Le système affiche ensuite des boîtes englobantes ainsi que des informations en temps réel telles que le nombre de détections et les niveaux de confiance.
+L’application utilise YOLOv8 pour détecter les personnes dans les images. Pour chaque personne détectée, une zone correspondant à la tête est estimée à partir d’un ratio configurable. Le système affiche ensuite des boîtes englobantes ainsi que des informations en temps réel telles que le nombre de détections et les niveaux de confiance.
 
 L’interface est organisée en plusieurs sections :
 - Accueil : présentation générale du système  
