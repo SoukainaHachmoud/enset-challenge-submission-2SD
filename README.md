@@ -1,21 +1,21 @@
-# SecureWatch — AI Industrial Surveillance
+# SecureWatch — Système de Surveillance Industrielle par IA
 
-SecureWatch is a real-time industrial surveillance application powered by computer vision. It uses YOLOv8 for human detection and provides an interactive dashboard for monitoring safety, detecting intrusions, and analyzing site activity.
+SecureWatch est une application de surveillance industrielle en temps réel basée sur la vision par ordinateur. Elle utilise YOLOv8 pour la détection de personnes et propose un tableau de bord interactif permettant de surveiller la sécurité, détecter les intrusions et analyser l’activité sur site.
 
-## Overview
+## Présentation
 
-The system is designed to enhance safety and security in industrial environments. It combines real-time detection with a modern user interface built using Streamlit. The application allows users to monitor camera feeds, detect human presence, and visualize alerts and performance metrics.
+Le système est conçu pour améliorer la sécurité dans les environnements industriels. Il combine des techniques avancées de détection en temps réel avec une interface moderne développée avec Streamlit. L’application permet de visualiser les flux, détecter la présence humaine et suivre les alertes ainsi que les indicateurs de performance.
 
-## Features
+## Fonctionnalités
 
-- Real-time human head detection using YOLOv8  
-- Interactive dashboard with alerts and key performance indicators  
-- Image upload and webcam-based detection  
-- Adjustable detection parameters (confidence threshold, IOU, head ratio)  
-- Incident timeline and camera status monitoring  
-- Custom user interface with responsive layout  
+- Détection en temps réel des têtes humaines à l’aide de YOLOv8  
+- Tableau de bord interactif avec alertes et indicateurs clés  
+- Analyse d’images importées et capture via webcam  
+- Paramètres de détection ajustables (seuil de confiance, IOU, ratio de tête)  
+- Suivi des incidents et état des caméras  
+- Interface utilisateur moderne et responsive  
 
-## Technologies
+## Technologies utilisées
 
 - Python  
 - Streamlit  
@@ -25,55 +25,56 @@ The system is designed to enhance safety and security in industrial environments
 - Pandas  
 - Pillow  
 
-## Project Structure 
-modl.py Main Streamlit application
-README.md Project documentation
-requirements.txt Project dependencies
+## Structure du projet
+modl.py Application principale Streamlit
+README.md Documentation du projet
+requirements.txt Dépendances du projet
 
 ## Installation
-1. Clone the repository:
-2. git clone https://github.com/your-username/your-repository.git
-cd your-repository
+1. Cloner le dépôt :
+git clone https://github.com/votre-utilisateur/votre-repository.git
+cd votre-repository
 
-2. (Optional) Create a virtual environment:
+2. Créer un environnement virtuel (optionnel mais recommandé) :
 python -m venv venv
 venv\Scripts\activate (Windows)
 source venv/bin/activate (Linux/Mac)
 
-3. Install dependencies:
+3. Installer les dépendances :
 pip install -r requirements.txt
 
-## Usage
-Run the application using Streamlit:
+## Utilisation
+
+Lancer l’application avec Streamlit :
 streamlit run modl.py
-Then open your browser at:
+
+Puis ouvrir dans le navigateur :
 http://localhost:8501
 
+## Description du fonctionnement
 
-## System Description
+L’application utilise YOLOv8 pour détecter les الأشخاص dans les images. Pour chaque personne détectée, une zone correspondant à la tête est estimée à partir d’un ratio configurable. Le système affiche ensuite des boîtes englobantes ainsi que des informations en temps réel telles que le nombre de détections et les niveaux de confiance.
 
-The application uses YOLOv8 to detect persons in images. For each detected person, a region corresponding to the head is estimated based on a configurable ratio. The system overlays bounding boxes and displays real-time information such as detection count and confidence levels.
+L’interface est organisée en plusieurs sections :
+- Accueil : présentation générale du système  
+- Tableau de bord : surveillance en temps réel et alertes  
+- Détection : analyse d’images et de captures webcam  
+- Contact : informations sur le projet et l’équipe  
 
-The interface is divided into multiple sections:
-- Home: presentation of the system and its capabilities  
-- Dashboard: real-time monitoring with alerts and statistics  
-- Detection: image and webcam-based analysis  
-- Contact: project and team information  
+## Équipe
 
-## Team
+- Doha Zilaoui — Développement principal  
+- Soukaina Hachmoud — Vision par ordinateur  
+- Sara Fadil — Backend et système d’alertes  
 
-- Doha Zilaoui — Lead Developer  
-- Soukaina Hachmoud — Computer Vision Engineer  
-- Sara Fadil — Backend and Alerts Engineer  
+## Perspectives d’amélioration
 
-## Future Work
+- Intégration de flux vidéo en temps réel (caméras RTSP)  
+- Détection des équipements de protection individuelle  
+- Détection de chutes via estimation de pose  
+- Notifications en temps réel (SMS, email)  
+- Déploiement sur des dispositifs embarqués  
 
-- Integration of live video streams (RTSP cameras)  
-- Personal protective equipment detection  
-- Fall detection using pose estimation  
-- Real-time alert notifications (SMS, email)  
-- Deployment on edge computing devices  
+## Licence
 
-## License
-
-This project is developed for academic and research purposes.
+Ce projet est réalisé dans un cadre académique et de recherche.
