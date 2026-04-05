@@ -10,7 +10,6 @@ import random
 from datetime import datetime, timedelta
 import pandas as pd
 
-# ── Page Config ───────────────────────────────────────────────────────────────
 st.set_page_config(
     page_title="SecureWatch — AI Industrial Surveillance",
     page_icon="🔒",
@@ -18,7 +17,6 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
-# ── Global CSS ────────────────────────────────────────────────────────────────
 st.markdown("""
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@300;400;600&display=swap');
@@ -173,7 +171,6 @@ def detect_heads(frame, conf_threshold, iou_threshold, head_ratio, box_color_hex
     _draw_hud(frame, head_count, color, conf_threshold)
     return frame, head_count
 
-# ── Sidebar navigation ────────────────────────────────────────────────────────
 with st.sidebar:
     st.markdown("""
     <div style='font-family:"Bebas Neue",sans-serif;font-size:1.8rem;
@@ -209,9 +206,7 @@ with st.sidebar:
     </div>
     """, unsafe_allow_html=True)
 
-# ══════════════════════════════════════════════════════════════════
-# PAGE: HOME
-# ══════════════════════════════════════════════════════════════════
+
 if "Home" in page:
     st.markdown("""
     <div style='padding:48px 0 24px;'>
@@ -311,9 +306,7 @@ if "Home" in page:
     st.markdown(f"<div style='margin-top:12px;'>{chips_html}</div>", unsafe_allow_html=True)
 
 
-# ══════════════════════════════════════════════════════════════════
-# PAGE: DASHBOARD
-# ══════════════════════════════════════════════════════════════════
+
 elif "Dashboard" in page:
     col_title, col_btn = st.columns([4, 1])
     with col_title:
@@ -462,9 +455,7 @@ elif "Dashboard" in page:
         """, unsafe_allow_html=True)
 
 
-# ══════════════════════════════════════════════════════════════════
-# PAGE: DETECTION (YOLOv8)
-# ══════════════════════════════════════════════════════════════════
+
 elif "Detection" in page:
     st.markdown("<h1>AI HEAD DETECTION</h1>", unsafe_allow_html=True)
     st.markdown("""
@@ -523,9 +514,7 @@ elif "Detection" in page:
             st.metric("👤 Heads Detected", count)
 
 
-# ══════════════════════════════════════════════════════════════════
-# PAGE: CONTACT
-# ══════════════════════════════════════════════════════════════════
+
 elif "Contact" in page:
     st.markdown("""
     <div style='padding:32px 0 48px;'>
@@ -614,7 +603,6 @@ elif "Contact" in page:
             </div>
             """, unsafe_allow_html=True)
 
-# ── Footer ────────────────────────────────────────────────────────────────────
 st.markdown("---")
 st.markdown("""
 <div style='font-family:"IBM Plex Mono",monospace;font-size:.62rem;
